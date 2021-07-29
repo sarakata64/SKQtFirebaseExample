@@ -14,6 +14,7 @@ Page{
     }
 
     ColumnLayout{
+        id : idCL
         anchors.centerIn: parent
         spacing: 30
 
@@ -32,8 +33,13 @@ Page{
             placeholderText: "Enter your Email"
             Layout.alignment: Qt.AlignCenter
         }
-        Row{
+        RowLayout{
+            id : idRL
             spacing: 20
+            Rectangle{
+                width: 50
+            }
+
             RoundButton{
                 Layout.alignment: Qt.AlignCenter
                 text: "Submit"

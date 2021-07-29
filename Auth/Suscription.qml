@@ -40,7 +40,7 @@ Page {
 
         TextField{
             id: sPasswordConfirm
-            placeholderText: "confirm your password"
+            placeholderText: "confirm password"
             echoMode: TextInput.Password
 
         }
