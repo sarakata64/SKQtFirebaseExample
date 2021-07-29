@@ -7,7 +7,7 @@
         <file>Controls/MyTextTitle.qml</file>
         <file>Pages/Menu.qml</file>
         <file>Singleton/qmldir</file>
-        <file>Pages/Inscription.qml</file>
-        <file>Pages/Password.qml</file>
+        <file>Auth/Password.qml</file>
+        <file>Auth/Suscription.qml</file>
     </qresource>
 </RCC>

@@ -35,7 +35,6 @@ ApplicationWindow{
 
         Loader{
             asynchronous: true
-            //    visible: status== Loader.Ready
         }
     }
 
@@ -47,35 +46,21 @@ ApplicationWindow{
         id: mMenu
         visible: false
     }
-    Inscription{
-           id: mInscription
-           visible: false
-       }
-       Password{
-           id : mPasswordPage
-           visible: false
-       }
-
-
-  /*
-    Messenging{
-        id:mMesseger
+    Suscription{
+        id: mInscription
+        visible: false
+    }
+    Password{
+        id : mPasswordPage
         visible: false
     }
 
 
-    Store{
-        id : mStore
-        visible:  false
-    }
-*/
     // the connections
     Connections{
         target: mMenu
     }
-    Connections{
-        target: mStore
-    }
+
     Connections {
         target: mLoginPage
         onMpasswordPageSignal:
@@ -88,7 +73,7 @@ ApplicationWindow{
             vuePile.replace(mInscription)
         }
     }
-   Connections{
+    Connections{
         target: mInscription
         onRetMainSignal:{
             mInscription.visible= false
@@ -107,15 +92,15 @@ ApplicationWindow{
     Connections{
         target: SKQtFirebase.mAuth
 
-          onErrorAuth :
-          {
-              console.log("error auth..."+ SKQtAuth.getResponseValue)
-          }
-          onSuccessAuth :{
-              console.log("successful Auth...."+SKQtAuth.getResponseValue)
-              vuePile.replace(mMenu)
-          }
+        onErrorAuth :
+        {
+            console.log("error auth...")
 
+        }
+        onSuccessAuth :{
+
+            vuePile.replace(mMenu)
+        }
 
     }
 

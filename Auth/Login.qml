@@ -58,7 +58,7 @@ Page {
                     mLabelMsg= "fill all field"
                 }else{
                     // Login here with your email address and password
-                    SKQtFirebase.mAuth.setSignInUser(_EmailTxt.text,_PaswordTxt.text)
+                    SKQtFirebase.mAuth.signInUser(_EmailTxt.text,_PaswordTxt.text)
 
                 }
 
