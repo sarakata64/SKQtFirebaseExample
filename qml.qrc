@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Auth/Login.qml</file>
+        <file>Singleton/SKQtFirebase.qml</file>
+        <file>Controls/MyTextField.qml</file>
+        <file>Controls/MyTextTitle.qml</file>
+        <file>Pages/Menu.qml</file>
+        <file>Singleton/qmldir</file>
+        <file>Pages/Inscription.qml</file>
+        <file>Pages/Password.qml</file>
+    </qresource>
+</RCC>
