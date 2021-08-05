@@ -15,24 +15,11 @@ Page {
         target: SKQtFirebase.mDatabase
 
        onDataAvailable:{
-           console.log("on data signal")
-          //myData= SKQtFirebase.mDatabase.getData
-       //   console.log( JSON.stringify( SKQtFirebase.mDatabase.getData))
-         // console.log(SKQtFirebase.mDatabase.getData)
 
-         //  var tt = {"aa":"aa","bb":"bb","cc":"cc"}
-
-           var obj =  SKQtFirebase.mDatabase.getData;
-          //retrieve values from JSON again
-           var aString = obj.aa;
-           //console.log(JSON.parse( obj));
-           console.log(obj.food);
-           console.log(JSON.stringify( obj));
-
-
-
-          //  console.log(JSON.parse( JSON.stringify(jobj)));
-
+           var obj =  SKQtFirebase.mDatabase.data();
+          //retrieve values from JSON
+           console.log(obj); // all JSON data
+           console.log(JSON.parse(obj).data.message); // retreive a single data [message]
 
        }
 
@@ -56,8 +43,8 @@ Page {
                             to:"sarakata"
                         }
                     }
-                    SKQtFirebase.mDatabase.sendData("profile",message); // "profile" is the child name
-                                                                  // it can be "profile/contact" for example
+                    SKQtFirebase.mDatabase.sendData("profile" ,message); // "profile" is the child name
+
                 }
 
 
@@ -67,7 +54,7 @@ Page {
                 radius: 6
                 text: "Read message"
                 onClicked: {
-                    SKQtFirebase.mDatabase.readData("pets/food");
+                    SKQtFirebase.mDatabase.readData("profile"); // read all profile data
 
                 }
 
