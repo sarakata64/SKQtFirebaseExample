@@ -59,30 +59,34 @@ ApplicationWindow{
     // the connections
     Connections{
         target: mMenu
+         ignoreUnknownSignals: true
     }
 
     Connections {
         target: mLoginPage
-        onMpasswordPageSignal:
+        ignoreUnknownSignals: true
+     function   onMpasswordPageSignal()
         {   mLoginPage.visible=false
             vuePile.replace(mPasswordPage)
         }
 
-        onMenuSignal: {
+      function  onMenuSignal(){
             mLoginPage.visible=false
             vuePile.replace(mInscription)
         }
     }
     Connections{
         target: mInscription
-        onRetMainSignal:{
+        ignoreUnknownSignals: true
+      function onRetMainSignal(){
             mInscription.visible= false
             vuePile.replace(mLoginPage)
         }
     }
     Connections{
         target: mPasswordPage
-        onMpSignal:{
+        ignoreUnknownSignals: true
+      function  onMpSignal(){
             mPasswordPage.visible= false
             vuePile.replace(mLoginPage)
         }
@@ -91,13 +95,14 @@ ApplicationWindow{
 
     Connections{
         target: SKQtFirebase.mAuth
+         ignoreUnknownSignals: true
 
-        onErrorAuth :
+       function onErrorAuth()
         {
             console.log("error auth...")
 
         }
-        onSuccessAuth :{
+     function   onSuccessAuth(){
 
             vuePile.replace(mMenu)
         }

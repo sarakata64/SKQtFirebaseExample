@@ -54,7 +54,7 @@ DISTFILES += \
     android/settings.gradle\
     android/res/values/libs.xml
 
-  LIBS += -L"C:/Users/assou/Desktop/SKQtFirebase/build-SKQtFirebase-Android_Qt_6_2_0_Clang_arm64_v8a-Debug/SKQtFirebase" -lSKQtFirebase_arm64-v8a
+  LIBS += -L"C:/Users/assou/Desktop/SKQtFirebase/SKQtFirebaseQmlExample/libs" -lSKQtFirebase_arm64-v8a
 }
 
 

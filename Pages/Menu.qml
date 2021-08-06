@@ -13,13 +13,14 @@ Page {
     Connections{
 
         target: SKQtFirebase.mDatabase
-
-       onDataAvailable:{
+         ignoreUnknownSignals: true
+      function onDataAvailable(){
 
            var obj =  SKQtFirebase.mDatabase.data();
           //retrieve values from JSON
            console.log(obj); // all JSON data
            console.log(JSON.parse(obj).data.message); // retreive a single data [message]
+           myData = JSON.parse(obj).data.message;
 
        }
 
