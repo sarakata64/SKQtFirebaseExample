@@ -7,10 +7,12 @@ Item {
 
     property  alias mAuth: idAuth
     property alias mDatabase: idDatabase
+
     SKQtAuth{
         id : idAuth
 
     }
+
 
     SKQtRealTimeDatabase{
         id : idDatabase

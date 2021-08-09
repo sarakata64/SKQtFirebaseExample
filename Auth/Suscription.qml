@@ -1,6 +1,8 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
+import SKQtAuth 1.0
+import SKQtRealTimeDatabase 1.0
 import "../Controls"
 import "../Singleton"
 
@@ -11,7 +13,7 @@ Page {
         color: "transparent"
     }
 
-    signal retMainSignal
+
 
     ColumnLayout{
         anchors.centerIn: parent
@@ -52,7 +54,8 @@ Page {
                 radius: 20
 
                 onClicked: {
-                    SKQtFirebase.mAuth.signUpUser(sEmailText.text, sPassword.text)
+                    //idAuth.signUpUser(sEmailText.text, sPassword.text)
+                   SKQtFirebase.mAuth.signUpUser(sEmailText.text, sPassword.text)
 
                 }
 

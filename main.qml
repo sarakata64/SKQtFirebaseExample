@@ -22,7 +22,7 @@ ApplicationWindow{
         anchors.centerIn: parent
         initialItem: mLoginPage
 
-        // test
+
         pushEnter: Transition {
             PropertyAnimation {
                 property: "opacity"
@@ -95,7 +95,7 @@ ApplicationWindow{
 
     Connections{
         target: SKQtFirebase.mAuth
-         ignoreUnknownSignals: true
+        ignoreUnknownSignals: true
 
        function onErrorAuth()
         {
@@ -110,5 +110,10 @@ ApplicationWindow{
     }
 
 
-}
+    Component.onCompleted: {
+      console.log("Main Page Loaded")
+    }
 
+
+
+}
